@@ -1,0 +1,23 @@
+{
+  "name": "controldeempresas_2020009_in6bm2",
+  "version": "1.0.0",
+  "description": "Prueba de laboratorio para taller",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Gabriel Melgar",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "fs": "^0.0.1-security",
+    "jwt-simple": "^0.5.6",
+    "moment": "^2.29.1",
+    "mongoose": "^6.2.3",
+    "nodemon": "^2.0.15",
+    "pdfmake": "^0.2.4"
+  }
+}
