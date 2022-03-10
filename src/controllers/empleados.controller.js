@@ -1,5 +1,5 @@
-const { ClientRequest } = require('http')
-const Empleados = require('../models/empleados.model')
+
+    const Empleados = require('../models/empleados.model')
 
 function agregarEmpleados(req, res) {
     var parameters = req.body
@@ -19,10 +19,10 @@ function agregarEmpleados(req, res) {
             idEmpresa: req.user.sub
         }, (err, EmpleadoNuevo) => {
             if (EmpleadoNuevo.length == 0) {
-                empleadoModel.save((err, EmpleadoNuevo) => {
+                empleadoModel.save((err, empleado) => {
                     if (err) return res.status(500).send({ mensaje: 'Error en la peticion' });
-                    if (!EmpleadoNuevo) return res.status(404).send({ mensaje: 'error, al agregar el empleado' });
-                    return res.status(200).send({ Empleados: EmpleadoNuevo });
+                    if (!empleado) return res.status(404).send({ mensaje: 'error, al agregar el empleado' });
+                    return res.status(200).send({ Empleados: empleado });
                 })
             } else {
                 return res.status(404).send({ message: 'esta creando el mismo empleado' })
